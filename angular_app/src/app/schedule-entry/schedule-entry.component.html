@@ -1,0 +1,30 @@
+<div>
+  <input type="button" value="normal" (click)="norm()" />
+     <form *ngIf="validn">
+       <pre>
+             Enter Your Name              <input type="text" name="name" #n />
+             Enter the Venue              <input type="text" name="venue" #v />
+             Enter the Description        <input type="text" name="descript" #des />
+             Enter the Date               <input type="text" name="date"  #d  />
+             Enter the Status             <input type=text  name="status" value="normal" #s  />
+             Enter the Time               <input type=text name="time" #t />
+                                          <input type=button value="add" (click)="saven(n,v,des,d,s,t)" />
+
+      </pre>
+     </form>
+  <input type="button" value="Important" (click)="Imp()" />
+     <form *ngIf="validi">
+       <pre>
+          Enter Your Name              <input type="text" name="namei" #ni />
+          Enter the Venue              <input type="text" name="venuei" #vi />
+          Enter the Description        <input type="text" name="descripti" #desi />
+          Enter the Date               <input type="text" name="datei"  #di  />
+          Enter the Status             <input type=text  name="statusi"  value="Important" #si  />
+          Enter the Time               <input type="text" name="timei" #ti />
+                                       <input type=button value="add" (click)="savei(ni,vi,desi,di,si,ti)" />
+
+            
+       </pre>
+     </form>   
+    
+</div>

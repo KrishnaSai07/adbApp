@@ -1,0 +1,57 @@
+<div>
+  <input type="button" value="View All Schedules" (click)="all()" />
+    <div *ngIf="validv">
+      <table width=80% border=1>
+        <th>NAME</th>
+        <th>VENUE</th>
+        <th>DESCRIPTION</th>
+        <th>DATE</th>
+        <th>STATUS</th>
+        <th>TIME</th>
+        
+        
+          
+        <tr *ngFor="let x of dummy_sched">
+          <td class="red">{{x.name}}</td>
+          <td class="red">{{x.venue}}</td>
+          <td class="red">{{x.descript}}</td>
+          <td class="red">{{x.date}}</td>
+          <td class="red" >{{x.status}}</td>
+          <td class="red">{{x.time}}</td>
+        </tr>  
+         
+         
+      </table>
+    </div> 
+  <input type="button" value="View By Date" (click)="date()" />
+    <div *ngIf="validd">
+      <input type="text" name=date #d />
+      <input type="button" value="search" (click)="search(d)" />
+        <div>
+              <table width=80% border=1>
+                 <th>NAME</th>
+                 <th>VENUE</th>
+                 <th>DESCRIPTION</th>
+                 <th>DATE</th>
+                 <th>STATUS</th>
+                 <th>TIME</th>
+                 
+              <tr *ngFor="let x of dummy_sched1">
+                
+                <td>{{x.name}}</td>
+                <td>{{x.venue}}</td>
+                <td>{{x.descript}}</td>
+                <td>{{x.date}}</td>
+                <td>{{x.status}}</td>
+                <td>{{x.time}}</td>
+            
+                
+              </tr>
+            
+              </table>
+        
+      </div>  
+    </div>  
+
+    
+</div>

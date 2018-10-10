@@ -1,0 +1,20 @@
+<div class="main">
+  <section class="header">
+    <h1>Welcome To The Schedule Planner</h1>
+  </section>
+  <section class="body">
+    <input class="entry"type="button" value="Add Schedule" (click)="add()" />
+       <div *ngIf="valida">
+         <app-schedule-entry  (dataentry)="addNewRecord($event)"></app-schedule-entry>
+
+       </div>
+
+
+    <input class="show" type="button" value="Show the schedule" (click)="show()"/>
+       <div *ngIf="valids">
+         <app-schedule-show [dummy_sched]="sched" ></app-schedule-show>
+
+
+       </div>
+  </section>
+</div>
